@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:title="@string/app_name" >
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/app_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/appicons"/>
+
+    <EditText
+        android:id="@+id/emil_log"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/app_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:drawablePadding="20dp"
+        android:hint="Email/ Mobile Number" />
+
+    <EditText
+        android:id="@+id/pass_log"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/emil_log"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_button"
+        android:drawablePadding="20dp"
+        android:hint="Password"
+        android:inputType="numberPassword" />
+
+
+
+    <Button
+        android:id="@+id/btn_check_login"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_button"
+        android:layout_below="@+id/pass_log"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:text="Login"
+        />
+    <TextView
+        android:id="@+id/tx_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_check_login"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="5dp"
+        android:text="Don't have account ?"/>
+
+    <Button
+        android:id="@+id/btn_back_sign"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_check_login"
+        android:layout_toEndOf="@id/tx_sign"
+        android:background="@color/white"
+        android:gravity="top"
+        android:text="Sign up" />
+
+</RelativeLayout>

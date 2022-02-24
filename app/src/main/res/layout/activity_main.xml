@@ -5,8 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:title="@string/app_name" >
+        <Button
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="skip"
+            />
 
-
+        <Button
+            android:id="@+id/btn_change_lang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="عربي"/>
+    </androidx.appcompat.widget.Toolbar>
     <ImageView
         android:id="@+id/app_img"
         android:layout_width="100dp"
@@ -61,7 +78,7 @@
         android:background="@android:color/darker_gray" />
 
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_sign"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/rounded_button"
@@ -69,6 +86,6 @@
         android:layout_below="@+id/tx_1"
         android:textAllCaps="false"
         android:layout_marginTop="20dp"
-        android:text="Register"
+        android:text="Sign Up"
         />
 </RelativeLayout>
