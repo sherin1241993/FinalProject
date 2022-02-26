@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/CompuMarts/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.147" />
+        <entry key="..\:/Users/CompuMarts/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/radio_normal.xml" value="0.147" />
+        <entry key="..\:/Users/CompuMarts/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/radio_selected.xml" value="0.147" />
+        <entry key="..\:/Users/CompuMarts/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/radio_selector.xml" value="0.147" />
         <entry key="..\:/Users/CompuMarts/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/rounded_button.xml" value="0.1745" />
         <entry key="..\:/Users/CompuMarts/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.16032608695652173" />
         <entry key="..\:/Users/CompuMarts/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_splash_screen.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/CompuMarts/AndroidStudioProjects/FinalProject/app/src/main/res/layout/botton_tab_nav.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/CompuMarts/AndroidStudioProjects/FinalProject/app/src/main/res/layout/login_activity.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/CompuMarts/AndroidStudioProjects/FinalProject/app/src/main/res/layout/register_activity.xml" value="0.20416666666666666" />
       </map>

@@ -9,10 +9,12 @@
 
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         app:title="@string/app_name"
+        app:navigationIcon="@drawable/back"
         >
 
     </androidx.appcompat.widget.Toolbar>
@@ -82,39 +84,65 @@
         android:padding="10dp"/>
     <RadioGroup
         android:id="@+id/radio_group"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Password"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="3dp"
         android:layout_marginTop="18dp"
-        android:layout_marginBottom="14dp">
+        android:layout_marginBottom="14dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
 
 
     <RadioButton
         android:id="@+id/radioButton1"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:button="@android:color/transparent"
+        android:background="@drawable/rounded_button"
+        android:drawableStart="@drawable/male"
+        android:gravity="center"
         android:text="Male" />
 
     <RadioButton
         android:id="@+id/radioButton2"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:button="@android:color/transparent"
+        android:background="@drawable/rounded_button"
+        android:drawableStart="@drawable/woman"
+        android:gravity="center"
         android:text="Female" />
 
     </RadioGroup>
 
     <Button
-        android:id="@+id/btn_sign"
+        android:id="@+id/btn_save_sign"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:background="@drawable/rounded_button"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/radio_group"
-        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
         android:text="Sign Up"
-        />
+        android:textAllCaps="false" />
+    <TextView
+        android:id="@+id/tx_back_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_save_sign"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="5dp"
+        android:text="I already have an account"/>
+
+    <Button
+        android:id="@+id/btn_back_login"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_save_sign"
+        android:layout_toEndOf="@id/tx_back_login"
+        android:background="@color/white"
+        android:gravity="top"
+        android:text="Login" />
 </RelativeLayout>
 </ScrollView>

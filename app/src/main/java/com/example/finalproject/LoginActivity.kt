@@ -13,5 +13,10 @@ class LoginActivity : AppCompatActivity(){
            var intent = Intent(this , RegisterActivity::class.java)
            startActivity(intent)
        }
+        btn_check_login.setOnClickListener {
+
+            var intent2 = Intent(this , BottonTabNav::class.java)
+            startActivity(intent2)
+        }
     }
 }

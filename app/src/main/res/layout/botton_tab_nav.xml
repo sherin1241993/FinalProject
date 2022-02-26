@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BottonTabNav">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/id_tabLayout" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/id_tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextColor="@color/black"
+        android:layout_alignParentBottom="true">
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab1"
+            android:text="Home"
+            android:icon="@drawable/ic_baseline_home_24"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab2"
+            android:text="More"
+            android:icon="@drawable/ic_baseline_more_horiz_24"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab3"
+            android:text="WishList"
+            android:icon="@drawable/ic_baseline_favorite_24"/>
+    </com.google.android.material.tabs.TabLayout>
+
+
+</RelativeLayout>
