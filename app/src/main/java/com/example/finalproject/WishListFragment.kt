@@ -1,5 +1,6 @@
 package com.example.finalproject
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -21,11 +22,19 @@ class WishListFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    lateinit var myshared : SharedPreferences
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+
+
         }
     }
 

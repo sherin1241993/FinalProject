@@ -23,7 +23,7 @@
     <EditText
         android:id="@+id/emil_log"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_below="@+id/app_img"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
@@ -34,21 +34,22 @@
     <EditText
         android:id="@+id/pass_log"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_below="@+id/emil_log"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:background="@drawable/rounded_button"
         android:drawablePadding="20dp"
+        android:inputType="numberPassword"
         android:hint="Password"
-        android:inputType="numberPassword" />
+         />
 
 
 
     <Button
         android:id="@+id/btn_check_login"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:background="@drawable/rounded_button"
         android:layout_below="@+id/pass_log"
         android:layout_marginTop="60dp"

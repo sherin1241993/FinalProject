@@ -5,24 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        app:title="@string/app_name" >
+        app:title="@string/app_name">
+
         <Button
             android:id="@+id/btn_skip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
             android:text="skip"
-            />
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_change_lang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="عربي"/>
+            android:text="عربي" />
     </androidx.appcompat.widget.Toolbar>
     <ImageView
         android:id="@+id/app_img"

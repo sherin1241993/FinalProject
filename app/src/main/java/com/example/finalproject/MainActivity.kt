@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity() {
             var intent2 = Intent(this , RegisterActivity::class.java)
             startActivity(intent2)
         }
+        btn_skip.setOnClickListener {
+            var intent3 = Intent(this , BottonTabNav::class.java)
+            startActivity(intent3)
+
+        }
     }
 
 
