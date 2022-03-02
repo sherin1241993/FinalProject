@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FinalProject</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">تخطى</string>
+    <string name="login">دخول</string>
+    <string name="or">أو</string>
+    <string name="sign_up">سجل</string>
+    <string name="home">الرئيسية</string>
+    <string name="more">المزيد</string>
+    <string name="wishlist">المفضلة</string>
+    <string name="email_mobile_number">البريد الالكترونى/ رقم الهاتف </string>
+    <string name="password">كلمه المرور</string>
+    <string name="don_t_have_account">ليس لديك حساب ؟</string>
+    <string name="first_name">الاسم الاول </string>
+    <string name="last_name">الاسم الاخير</string>
+    <string name="mobile_number">رقم الجوال </string>
+    <string name="email">البريد الالكتروني </string>
+    <string name="male">ذكر</string>
+    <string name="female">انثى</string>
+    <string name="i_already_have_an_account">لدي حساب بالفعل</string>
+    <string name="lang">English</string>
+    <string name="my_profile">حسابي</string>
+    <string name="msg_login">انت تحتاج الي تسجيل الدخول اولا</string>
+    <string name="msg_logout">هل انت متاكد انك تريد تسجيل الخروج </string>
+    <string name="cancel">الغاء</string>
+    <string name="welcome">مرحبا</string>
+    <string name="language">اللغة</string>
+    <string name="log_out">تسجيل الخروج</string>
+    <string name="name">الاسم</string>
+    <string name="description">الوصف</string>
+    <string name="your_data_is">بياناتك هي </string>
+
+
+</resources>

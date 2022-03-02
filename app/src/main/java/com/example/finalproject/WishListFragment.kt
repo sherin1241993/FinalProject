@@ -1,6 +1,7 @@
 package com.example.finalproject
 
-import android.content.SharedPreferences
+import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -22,19 +23,11 @@ class WishListFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    lateinit var myshared : SharedPreferences
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
-
-
         }
     }
 
@@ -46,23 +39,47 @@ class WishListFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_wish_list, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment WishListFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            WishListFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        myshared = requireActivity().getSharedPreferences("myshared", 0)
+        if (myshared.contains("userLoggedIn") == false) {
+
+            val builder = androidx.appcompat.app.AlertDialog.Builder(requireActivity())
+
+            // Sets TITLE for Alert Dialog Box
+            // builder.setTitle("ALERT DIALOG BOX")
+
+            // Sets the message you want to display
+            builder.setMessage(getString(R.string.msg_login))
+
+            // Creates a positive Button with a Click Listener
+            builder.setPositiveButton(getString(R.string.login)) { dialog, which ->
+
+                var intent = Intent(activity, MainActivity::class.java)
+                startActivity(intent)
+
+                //to close the app
+                // finishAffinity()
+
+
             }
+
+
+            // Creates a Negative Button with a Click Listener
+            builder.setNegativeButton(getString(R.string.cancel)) { dialog, which ->
+
+            }
+
+
+            // Creates a Neutral Button with a Click Listener
+            // builder.setNeutralButton("Cancel"){_,_ ->
+            //  }
+            //  Creates an Alert Dialog and Displays it on the screen
+            val dialog: androidx.appcompat.app.AlertDialog = builder.create()
+            dialog.show()
+        }
+
     }
+
 }

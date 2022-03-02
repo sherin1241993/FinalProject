@@ -1,5 +1,33 @@
 <resources>
-    <string name="app_name">FinalProject</string>
+    <string name="app_name" translatable="false">FinalProject</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">skip</string>
+    <string name="login">Login</string>
+    <string name="or">or</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="home">Home</string>
+    <string name="more">More</string>
+    <string name="wishlist">WishList</string>
+    <string name="email_mobile_number">Email/ Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_account">Don\'t have account ?</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="i_already_have_an_account">I already have an account</string>
+    <string name="lang">عربي</string>
+    <string name="my_profile">My Profile</string>
+    <string name="msg_login">you need to be login first</string>
+    <string name="msg_logout">are you sure you want to log out</string>
+    <string name="cancel">CANCEL</string>
+    <string name="welcome">Welcome</string>
+    <string name="language">Language</string>
+    <string name="log_out">Log out</string>
+    <string name="name">NAME</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="your_data_is">your data is</string>
 </resources>

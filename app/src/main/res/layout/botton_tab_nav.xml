@@ -23,21 +23,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tab1"
-            android:text="Home"
+            android:text="@string/home"
             android:icon="@drawable/ic_baseline_home_24"/>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tab2"
-            android:text="More"
+            android:text="@string/more"
             android:icon="@drawable/ic_baseline_more_horiz_24"/>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tab3"
-            android:text="WishList"
+            android:text="@string/wishlist"
             android:icon="@drawable/ic_baseline_favorite_24"/>
     </com.google.android.material.tabs.TabLayout>
 

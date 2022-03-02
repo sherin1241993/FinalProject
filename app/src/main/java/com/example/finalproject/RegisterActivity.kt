@@ -30,6 +30,16 @@ class RegisterActivity : AppCompatActivity() {
             startActivity(intent2)
         }
 
+        radio_group.setOnCheckedChangeListener { radioGroup, i ->
+
+            radioButton1.isPressed = true
+            radioButton2.isPressed = false
+
+
+
+        }
+
+
 
         //validation of register
         btn_save_sign.setOnClickListener {
@@ -64,13 +74,14 @@ class RegisterActivity : AppCompatActivity() {
                     if (Email.text.toString().matches(Regex(EMAIL_REGEX))&& Mobile_number.text.toString().matches(Regex(MOBILE_REGEX))) {
                         var intent4 = Intent(this, BottonTabNav::class.java)
                         startActivity(intent4)
+                        saveData()
                     } else {
                         Toast.makeText(this, "enter valid email or mobile number", Toast.LENGTH_SHORT).show()
                     }
 
                 }
             }
-               saveData()
+
 
 
 
@@ -85,7 +96,7 @@ class RegisterActivity : AppCompatActivity() {
         var LastName = Last_name.text.toString()
         var Mobile = Mobile_number.text.toString()
         var Email = Email.text.toString()
-        var Password = Mobile_number.text.toString()
+        var Password = Password.text.toString()
 
 
 

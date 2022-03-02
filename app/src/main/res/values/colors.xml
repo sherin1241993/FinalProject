@@ -6,10 +6,11 @@
     <color name="Indigo_900">#1A237E</color>
     <color name="Yellow_A200">#FFFF00</color>
     <color name="Yellow_A700">#FFD600</color>
-    <color name="Gray_700">#616161</color>
+    <color name="Gray_700">#ECE9E9</color>
     <color name="Blue_Gray_900">#263238</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
 </resources>

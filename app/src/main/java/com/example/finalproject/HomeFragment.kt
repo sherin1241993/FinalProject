@@ -1,10 +1,21 @@
 package com.example.finalproject
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.finalproject.api.ApiInterface
+import com.example.finalproject.api.Response
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.coroutines.*
+import retrofit2.Retrofit
+import retrofit2.converter.moshi.MoshiConverterFactory
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,25 +46,51 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    @DelicateCoroutinesApi
+    @SuppressLint("WrongConstant")
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        recycler_posts.layoutManager = LinearLayoutManager(this.context, LinearLayout.VERTICAL, false)
+        fitchAllPosts()
+
+    }
+
+
+
+    @DelicateCoroutinesApi
+    fun fitchAllPosts() {
+
+        val Basic_Url = "https://gateway.marvel.com/"
+
+        //make a retrofit variable
+        val retrofit = Retrofit.Builder()
+            //base url
+            .baseUrl(Basic_Url)
+            //the type of converter
+            .addConverterFactory(
+                MoshiConverterFactory.create(
+                    Moshi.Builder().add(
+                KotlinJsonAdapterFactory()
+                    ).build()))
+
+            //.client(okHttpClient)
+            .build()
+            .create(ApiInterface::class.java)
+        //launching a new coroutine
+        GlobalScope.launch (Dispatchers.IO) {
+            val response = retrofit.getData()
+            withContext(Dispatchers.Main){
+                if (response.isSuccessful) {
+
+                    val allData: Response? =
+                        response.body() as Response?
+                    recycler_posts.adapter = allData?.let { CustomAdapter(it.data.results) }
                 }
+
             }
+        }
     }
 }
