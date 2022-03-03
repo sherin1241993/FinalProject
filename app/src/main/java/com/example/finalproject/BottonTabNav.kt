@@ -11,6 +11,9 @@ class BottonTabNav: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.botton_tab_nav)
 
+        id_tabLayout.isNestedScrollingEnabled= false
+        viewPaper.isHorizontalScrollBarEnabled = false
+
         setUpTabBar()
     }
 
@@ -30,6 +33,7 @@ class BottonTabNav: AppCompatActivity() {
 
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPaper.currentItem = tab.position
+                viewPaper.isNestedScrollingEnabled = false
 
                 viewPaper.isHorizontalScrollBarEnabled = false
             }
