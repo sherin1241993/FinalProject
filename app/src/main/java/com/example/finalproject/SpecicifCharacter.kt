@@ -1,6 +1,8 @@
 package com.example.finalproject
 
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.finalproject.api.ApiInterface
@@ -8,6 +10,7 @@ import com.example.finalproject.api.Response
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.specific_character.*
 import kotlinx.coroutines.*
 import retrofit2.Retrofit
@@ -21,6 +24,8 @@ class SpecicifCharacter: AppCompatActivity() {
         setContentView(R.layout.specific_character)
         var charid :Int = intent.extras?.getInt("id")!!
       fitchSpecificChar(charid)
+
+        progressBar2.visibility = View.VISIBLE
 
     }
 
@@ -49,12 +54,16 @@ class SpecicifCharacter: AppCompatActivity() {
             val response = retrofit.getDetails(id)
             withContext(Dispatchers.Main){
                 if (response.isSuccessful) {
+                    progressBar2.visibility = View.INVISIBLE
 
                     val allData: Response? = response.body() as Response?
-                   // image_character= intent.extras?.get("image") as ImageView?
+                   val image= intent.extras?.get("image")
                     txt_name.text = intent.extras?.getString("name")
                     txt_desc.text = intent.extras?.getString("description")
-                   // Picasso.get().load("image").into(image_character)
+                    Log.e("image", intent.extras?.getString("image").toString())
+                    txt_desc.text = intent.extras?.getString("description")
+
+                    Picasso.get().load(image.toString()).into(image_character)
 
 
                 }

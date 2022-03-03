@@ -56,6 +56,8 @@ class HomeFragment : Fragment() {
         recycler_posts.layoutManager = LinearLayoutManager(this.context, LinearLayout.VERTICAL, false)
         fitchAllPosts()
 
+        progressBar1.visibility = View.VISIBLE
+
     }
 
 
@@ -84,6 +86,7 @@ class HomeFragment : Fragment() {
             val response = retrofit.getData()
             withContext(Dispatchers.Main){
                 if (response.isSuccessful) {
+                    progressBar1.visibility = View.INVISIBLE
 
                     val allData: Response? =
                         response.body() as Response?

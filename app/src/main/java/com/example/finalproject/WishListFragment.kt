@@ -82,4 +82,46 @@ class WishListFragment : Fragment() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        myshared = requireActivity().getSharedPreferences("myshared", 0)
+        if (myshared.contains("userLoggedIn") == false) {
+
+            val builder = androidx.appcompat.app.AlertDialog.Builder(requireActivity())
+            builder.setCancelable(false)
+
+            // Sets TITLE for Alert Dialog Box
+            // builder.setTitle("ALERT DIALOG BOX")
+
+            // Sets the message you want to display
+            builder.setMessage(getString(R.string.msg_login))
+
+            // Creates a positive Button with a Click Listener
+            builder.setPositiveButton(getString(R.string.login)) { dialog, which ->
+
+                var intent = Intent(activity, MainActivity::class.java)
+                startActivity(intent)
+
+                //to close the app
+                // finishAffinity()
+
+
+            }
+
+
+            // Creates a Negative Button with a Click Listener
+            builder.setNegativeButton(getString(R.string.cancel)) { dialog, which ->
+
+            }
+
+
+            // Creates a Neutral Button with a Click Listener
+            // builder.setNeutralButton("Cancel"){_,_ ->
+            //  }
+            //  Creates an Alert Dialog and Displays it on the screen
+            val dialog: androidx.appcompat.app.AlertDialog = builder.create()
+            dialog.show()
+        }
+    }
+
 }

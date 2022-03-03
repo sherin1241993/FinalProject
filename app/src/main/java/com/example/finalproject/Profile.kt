@@ -21,7 +21,7 @@ class Profile : AppCompatActivity() {
         show_mobile.text = mobileNaumber
 
         val Email = sharedPreferences.getString("email","")
-        show_email.text = mobileNaumber
+        show_email.text = Email
 
         val Password = sharedPreferences.getString("password","")
         show_password.text = Password

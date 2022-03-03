@@ -95,7 +95,7 @@ class RegisterActivity : AppCompatActivity() {
         var FirstName = First_name.text.toString()
         var LastName = Last_name.text.toString()
         var Mobile = Mobile_number.text.toString()
-        var Email = Email.text.toString()
+        var EmailAdress = Email.text.toString()
         var Password = Password.text.toString()
 
 
@@ -104,7 +104,7 @@ class RegisterActivity : AppCompatActivity() {
             putString("firstname", FirstName)
             putString("lastname", LastName)
             putString("mobile", Mobile)
-            putString("email", Email)
+            putString("email", EmailAdress)
             putString("password", Password)
             putBoolean("userLoggedIn",true)
 

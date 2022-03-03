@@ -86,10 +86,10 @@
         android:drawablePadding="20dp"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:textAlignment="textStart"
         android:padding="10dp"
         android:paddingStart="20dp"
-        android:paddingEnd="20dp" />
+        android:paddingEnd="20dp"
+        android:textAlignment="textStart" />
 
     <EditText
         android:id="@+id/Password"

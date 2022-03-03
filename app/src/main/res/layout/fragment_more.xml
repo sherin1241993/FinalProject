@@ -39,7 +39,7 @@
       android:layout_height="wrap_content"
       android:text="@string/my_profile"
       android:textColor="@color/black"
-      android:textSize="25sp"
+      android:textSize="23sp"
       app:drawableStartCompat="@drawable/profile" />
 
   </androidx.cardview.widget.CardView>
@@ -61,8 +61,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/language"
-        android:textSize="25sp"
-        app:drawableStartCompat="@drawable/linguistics"
+        android:textSize="23sp"
+        app:drawableStartCompat="@drawable/lang"
         android:textColor="@color/black"/>
 
   </androidx.cardview.widget.CardView>
@@ -82,10 +82,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/log_out"
-        android:textSize="25sp"
+        android:textSize="23sp"
         android:textColor="@color/black"
-        app:drawableStartCompat="@drawable/poweroff" />
+        app:drawableStartCompat="@drawable/power" />
 
   </androidx.cardview.widget.CardView>
-
 </RelativeLayout>

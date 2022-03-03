@@ -16,99 +16,98 @@
         app:title="@string/welcome"
         app:titleTextColor="@color/white" />
 
-      <RelativeLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:layout_below="@+id/toolbar_data"
-          android:layout_marginStart="15dp"
-          android:layout_marginEnd="15dp"
-          >
-
-
-    <TextView
-        android:id="@+id/txt_first"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/first_name"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        android:textSize="25sp"/>
-    <TextView
-        android:id="@+id/show_first_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_first"/>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_data"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
 
 
-    <TextView
-        android:id="@+id/txt_lastname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/last_name"
-        android:layout_below="@+id/show_first_name"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/txt_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/first_name"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/show_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_first" />
 
 
-    <TextView
-        android:id="@+id/show_last_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_lastname"
-        />
+        <TextView
+            android:id="@+id/txt_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/show_first_name"
+            android:layout_marginTop="30dp"
+            android:text="@string/last_name"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
 
-    <TextView
-        android:id="@+id/txt_mobile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/mobile_number"
-        android:layout_below="@+id/show_last_name"
-        android:textStyle="bold"
-        android:layout_marginTop="30dp"
-        android:textSize="25sp"/>
-    <TextView
-        android:id="@+id/show_mobile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_mobile"
-        />
+        <TextView
+            android:id="@+id/show_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_lastname" />
 
 
-    <TextView
-        android:id="@+id/txt_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/email"
-        android:layout_below="@+id/show_mobile"
-        android:textStyle="bold"
-        android:layout_marginTop="30dp"
-        android:textSize="25sp"/>
-    <TextView
-        android:id="@+id/show_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_email"
-        />
+        <TextView
+            android:id="@+id/txt_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/show_last_name"
+            android:layout_marginTop="30dp"
+            android:text="@string/mobile_number"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/show_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_mobile" />
 
 
+        <TextView
+            android:id="@+id/txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/show_mobile"
+            android:layout_marginTop="30dp"
+            android:text="@string/email"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/password"
-        android:layout_below="@+id/show_email"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        android:textSize="25sp"/>
-    <TextView
-        android:id="@+id/show_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_password"/>
-      </RelativeLayout>
+        <TextView
+            android:id="@+id/show_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_email" />
+
+
+        <TextView
+            android:id="@+id/txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/show_email"
+            android:layout_marginTop="30dp"
+            android:text="@string/password"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/show_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_password" />
+    </RelativeLayout>
 
 
 </RelativeLayout>

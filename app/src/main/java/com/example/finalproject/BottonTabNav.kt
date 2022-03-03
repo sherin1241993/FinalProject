@@ -30,6 +30,8 @@ class BottonTabNav: AppCompatActivity() {
 
             override fun onTabSelected(tab: TabLayout.Tab) {
                 viewPaper.currentItem = tab.position
+
+                viewPaper.isHorizontalScrollBarEnabled = false
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
